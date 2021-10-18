@@ -58,29 +58,29 @@ print("reversed number is ",rev_num)
 
 
 #WAP to display fibonaci series upto given terms
- given_num=int(input("enter the range of series"))
- n1=0
- n2=1
- sum=0
- count =1
- if(given_num<0):
-     print("enter a positive number")
- elif(given_num==1):
-     print("fibonaci series upto 1 term is :",n1)
- else:
-     print("fibonaci series upto given term is :", end=" ")
-     while(count <=given_num):
-         print(sum,end=" ")
-         count = count+1
-         n1=n2
-         n2=sum
-         sum = n1+n2
+given_num=int(input("enter the range of series"))
+n1=0
+n2=1
+sum=0
+count =1
+if(given_num<0):
+    print("enter a positive number")
+elif(given_num==1):
+    print("fibonaci series upto 1 term is :",n1)
+else:
+    print("fibonaci series upto given term is :", end=" ")
+    while(count <=given_num):
+        print(sum,end=" ")
+        count = count+1
+        n1=n2
+        n2=sum
+        sum = n1+n2
 
 #WAP to calculate the cube of all the numner to a givn number
- given_num = int(input("enter the number "))
- for i in range (1,given_num+1):
-     cube = i**3
-     print(cube)
+given_num = int(input("enter the number "))
+for i in range (1,given_num+1):
+    cube = i**3
+    print(cube)
 
 #WAP to remove all the integers from a string
 

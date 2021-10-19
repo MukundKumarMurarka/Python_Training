@@ -32,6 +32,15 @@ print("Reversed list ",dup_list)
 
 
 # 5. WAP to sort (ascending and descending) a dictionary by value.
+#import operatator
+import operator
+mobile_Stock={"nokia":18,"sony":9,"redmi":13,"iball": 21,"opppo" :14}
+print('Original dictionary : ',mobile_Stock)
+sorted_d = sorted(mobile_Stock.items(), key=operator.itemgetter(1))
+print('Dictionary in ascending order by value : ',sorted_d)
+sorted_d = dict( sorted(mobile_Stock.items(), key=operator.itemgetter(1),reverse=True))
+print('Dictionary in descending order by value : ',sorted_d)
+
 
 
 

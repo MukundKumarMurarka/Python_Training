@@ -24,3 +24,6 @@ print("even number list : ", even_lst)
 # filter function using lamda function (doing same problem
 even_lst2 = list(filter(lambda n: n % 2 == 0, num))
 print("print even list using lamda function : ", even_lst2)
+
+
+

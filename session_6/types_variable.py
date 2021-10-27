@@ -22,6 +22,7 @@ class School:
 
 
 sch = School(30, 31, 35)
+print("marks1 ", getattr(sch,"mst1"))  # accessing instance variable using getattr
 sch.average()
 print(School.name)
 

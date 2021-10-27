@@ -26,8 +26,7 @@ class Student_2:
 
 
 print(Student_2.marks1)  # this will print the marks of student.
-print(
-    Student_2.maks_stu)  # this will print the hexadecimal output which indicates the address of class. we can call the function of class by classname.
+print(Student_2.maks_stu)  # this will print the hexadecimal output which indicates the address of class. we can call the function of class by classname.
 
 
 #  There are also special attributes in it that begins with double underscores __.

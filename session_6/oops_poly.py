@@ -11,7 +11,7 @@ print(type(name))
 print(type(list1))
 
 
-# example of polymorphism with user defined function
+# example of polymorphism with user defined function  with method overriding
 
 def sumation(*d):
     add = 0
@@ -24,7 +24,7 @@ sumation(5, 6, 9)
 sumation(1, 2, 3, 4, 5, 6, 7, 8)
 
 
-# example of polymorphism in in inheritance
+# example of polymorphism in in inheritance with method overloading
 class Human:
     def moving(self):
         print("young man can move fast")

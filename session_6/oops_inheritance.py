@@ -57,9 +57,8 @@ class iphone(Phone):
         print(self.cost_iphone, " ", self.ram_iphone ," ", self.os_iphone)
 
 
-phone1 = Phone(10000, 8, "android")
+# phone1 = Phone(10000, 8, "android")
 iphone1 = iphone(20000, 4, "ios")
 
 iphone1.iphone_detail()
-
-phone1.phone_detail()
+# phone1.phone_detail()

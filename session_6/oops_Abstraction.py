@@ -10,8 +10,19 @@ Abstraction :- Abstraction is used to hide the internal functionality of the fun
             from abc import ABC
             class ClassName(ABC):
 """
-# abstract base class work
 from abc import ABC, abstractmethod
+
+# class Student(ABC):
+#     @abstractmethod
+#     def detail(self):
+#         pass
+# stu1 = Student()
+# stu1.detail()
+#
+
+
+# abstract base class work
+
 
 
 class Car(ABC):

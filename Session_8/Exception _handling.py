@@ -10,65 +10,66 @@ there are two blocks in exception handling.
  for example
 """
 # this example of exception comes under arithmatic error
-print(" 1. example of exception ")
-a = int(input("enter the first number "))
-b  = int(input(" enter the second number "))
-try:
-    print(a/b)
-except Exception as exe:
-    print(" we cannot devide any number by zero ", exe )
+# print(" 1. example of exception ")
+# a = int(input("enter the first number "))
+# b  = int(input(" enter the second number "))
+# try:
+#     print(a/b)
+# except Exception as exe:
+#     print(" we cannot devide any number by zero ", exe )
 
 
 # example of exceptoin i.e comes under the  exception LookupError. index error comess under the exception lookuperror
-print("2. example of exception in list  ")
-list = [10, 20, 23, 34, 45]
-length = len(list)
-n = int(input("enter the index number "))
-
-try:
-    print(list[n])
-except Exception as ex:
-    print(" invaild input ", ex)
+# print("2. example of exception in list  ")
+# list = [10, 20, 23, 34, 45]
+# length = len(list)
+# n = int(input("enter the index number "))
+#
+# try:
+#     print(list[n])
+# except Exception as ex:
+#     print(" invaild input ", ex)
 
 
 #Example of exeption with more than one except block
-print("Example of exeption with more than one except block ")
-def calculation():
-    c =  int(input(" enter a number "))
-    d = int(input("enter the second number "))
-    if c<d:
-
-        result = (c+d)/(c-d)
-    print("result = ",result)
-
-
-try:
-    calculation()
-except ZeroDivisionError:
-    print("denomintor will become zero ")
-except Exception as e :
-    print(" invaid input ",e )
+# print("Example of exeption with more than one except block ")
+# def calculation():
+#     c =  int(input(" enter a number "))
+#     d = int(input("enter the second number "))
+#
+#
+#     result = (c+d)/(c-d)
+#
+#
+#
+# try:
+#     calculation()
+# except Exception as e :
+#     print(" invaid input ",e )
+# except ZeroDivisionError:
+#     print("denomintor will become zero ")
+#
 
 
 #example of exception with else block
-print("example of exception with else block")
-
-c =  int(input(" enter a number "))
-d = int(input("enter the second number "))
-if c<d:
-    try:
-        result = (c + d) / (c - d)
-
-    except ZeroDivisionError:
-        print("denomintor should not be  zero ")
-
-    else:
-        print(result)
-else:
-    result = (c + d) / (c - d)
-    print(result)
-
-
+# print("example of exception with else block")
+#
+# c =  int(input(" enter a number "))
+# d = int(input("enter the second number "))
+# if c<d:
+#     try:
+#         result = (c + d) / (c - d)
+#
+#     except ZeroDivisionError:
+#         print("denomintor should not be  zero ")
+#
+#     else:
+#         print(result)
+# else:
+#     result = (c + d) / (c - d)
+#     print(result)
+#
+#
 
 
 

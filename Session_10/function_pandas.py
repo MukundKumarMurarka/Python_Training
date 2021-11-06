@@ -1,6 +1,6 @@
 import pandas as pd
 
-# more function or most function in pandas
+# more function  in pandas
 
 
 # creating a dictionary
@@ -13,7 +13,7 @@ mobile = {"model_number": ["one fusion plus", "one plus nord", "redmi note 9", "
 # convert it into dataframe
 df_phone = pd.DataFrame(mobile)
 df_phone.to_csv("phone.csv")  # careating a excel sheet
-df_phone_data = pd.read_csv("phone.csv")  # read the csv file available in csv folder
+df_phone_data = pd.read_csv("phone.csv")  # read the csv file
 print("print all the data available in phone.csv xcelsheet : ")
 print(df_phone_data)
 
@@ -124,9 +124,12 @@ By default the axis is the index axis.
 """
 
 print("maxium cost of datasheet : ")
+
+print(df_phone.loc[:,"cost"])
 print(df_phone.max(axis=0))
 print("minimum cost of datasheet : ")
 print(df_phone.min(axis=0))
+print(df_phone["cost"].max())
 
 
 
@@ -138,3 +141,32 @@ dataframe.replace(to_replace=none, value = None, inplace = false, limit= None, r
 """
 print(" printing the new data : ")
 print(df_phone.replace(to_replace="oppo", value=" xiomi "))
+
+
+"""
+Mask function :-  
+Pandas dataframe.mask() function return an object of same shape as self and whose corresponding entries are from self where cond is False and otherwise are from other object.
+The other object could be a scalar, series, dataframe or could be a callable. 
+The mask method is an application of the if-then idiom.
+For each element in the calling DataFrame, if cond is False the element is used; otherwise the corresponding element from the DataFrame other is used.
+syntax: 
+DataFrame.mask(cond, other=nan, inplace=False, axis=None, level=None, errors=’raise’, try_cast=False, raise_on_error=None)
+"""
+
+# importing pandas as pd
+import pandas as pd
+
+# Creating the dataframe
+
+dict = {"A": [12, 4, 5, 44, 1],
+        "B": [5, 2, 54, 3, 2],
+       "C": [20, 16, 7, 3, 8],
+       "D": [14, 3, 17, 2, 6]}
+df = pd.DataFrame(dict)
+
+
+print (df)
+print("updated list : ")
+
+print(df.mask(df > 10, 100))
+

@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = {"a": [1, 2, 3, 4, 5],
+data = {"a": [1, 5, 3, 4, 5],
         "b": [6, 7, 8, 9, 10],
         "c": [11, 12, 13, 14, 15],
         "d": [16, 17, 18, 19, 20],
@@ -12,12 +12,22 @@ data = {"a": [1, 2, 3, 4, 5],
         "j": [46, 47, 48, 49, 50]}
 data1 = pd.DataFrame(data)
 data_cpy = data1.to_csv("num_data.csv")
+
 print(data1)
 
 data_even = pd.read_csv("num_data.csv")
-even_data = data_even[2: :2]
+
+print(data_even.mask(data1%2==0 ,"Nan"))
 
 
-print(even_data)
-newdata= data1.replace(even_data, "Nan")
-print(newdata)
+
+"""
+Drop function is used to drop a row column in  dataframe .
+it is used to remove rows or columns by specifying labels names and corresponding axis, or by specifying directly index or column nmaes
+syntax 
+DataFrame.drop(self,labels=None, axis =0 ,index = None, lavel = none, inplace = False, errors="raise)
+"""
+
+
+print("new data after droping the data from datasheet : ")
+print(data1.drop(columns=["i","j"]))

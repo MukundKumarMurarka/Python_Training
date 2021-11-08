@@ -42,7 +42,7 @@ e = np.random.random((3, 3))  # Create an array with random values
 print("\nA random array:\n", e)
 
 # Create a sequence of integers
-# from 0 to 30 with steps of 5
+# from 0 to 54 with steps of 6
 f = np.arange(0, 54, 6)
 print("\nA sequential array with steps of 6:\n", f)
 
@@ -100,7 +100,7 @@ sorting :-   Sorting refers to arranging data in a particular format.
 Sorting algorithm specifies the way to arrange data in a particular order. 
 Most common orders are in numerical or lexicographical order. 
 In Numpy, we can perform various sorting operations using the various functions that are provided in the library
- like sort, lexsort, argsort etc. 
+like sort, lexsort, argsort etc. 
 """
 
 # example of sort
@@ -127,7 +127,7 @@ for i in range(0, len(index_sort_array)):
     new_arr[i] = arr2[index_sort_array[i]]
 print("\n sorted array \n ", new_arr)
 
-# example of sorted array using
+
 # numpy.lexsort() : This function returns an indirect stable sort using a sequence of keys.
 
 
@@ -196,3 +196,35 @@ print(("\nIndices of max in array2 : "
 
 print(("\nIndices at axis 1 of array2 : "
        , np.nanargmax(array2, axis=1)))
+
+
+
+"""
+Stacking of arrays :- Stacking: Several arrays can be stacked together along different axes.
+np.vstack: To stack arrays along vertical axis.
+np.hstack: To stack arrays along horizontal axis.
+np.column_stack: To stack 1-D arrays as columns into 2-D arrays.
+np.concatenate: To stack arrays along specified axis (axis is passed as argument).
+
+
+"""
+# example of stacking
+x = np.array([[1, 2],
+              [3, 4]])
+
+y = np.array([[5, 6],
+              [7, 8]])
+
+# vertical stacking
+print("Vertical stacking:\n", np.vstack((x, y)))
+
+# horizontal stacking
+print("\nHorizontal stacking:\n", np.hstack((x, y)))
+
+c = [5, 6]
+
+# stacking columns
+print("\nColumn stacking:\n", np.column_stack((x, c)))
+
+# concatenation method
+print("\nConcatenating to 2nd axis:\n", np.concatenate((x, y), 1))
